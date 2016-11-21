@@ -1,0 +1,33 @@
+//
+//  MVVM-Prefix.pch
+//  MVVM
+//
+//  Created by 营 on 2016/11/21.
+//  Copyright © 2016年 营. All rights reserved.
+//
+
+#ifndef MVVM_Prefix_pch
+#define MVVM_Prefix_pch
+
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kTabBarHeight 49
+#define JMColor(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define JMAColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define JMTableViewBackgroundColor JMColor(238,238,238)
+#import <UIKit/UIKit.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <Masonry.h>
+#import <AFNetworking.h>
+#import <MBProgressHUD.h>
+#import <JSONModel.h>
+#import <MJRefresh.h>
+#import <Photos/Photos.h>
+#import <MWPhotoBrowser.h>
+#import "JMTipView.h"
+#import <UITableView+FDTemplateLayoutCell.h>
+#import "UIView+Extension.h"
+
+
+#endif /* MVVM_Prefix_pch */
