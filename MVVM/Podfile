@@ -1,0 +1,11 @@
+platform :ios,'8.0'
+target 'MVVM' do
+    pod 'MBProgressHUD'
+    pod 'AFNetworking'
+    pod 'MJRefresh'
+    pod 'JSONModel'
+    pod 'SDWebImage'
+    pod 'Masonry'
+    pod 'UITableView+FDTemplateLayoutCell'
+    pod 'MWPhotoBrowser'
+end
