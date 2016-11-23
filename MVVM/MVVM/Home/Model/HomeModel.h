@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 @interface HomeModel : JSONModel
-@property (nonatomic, copy) NSString *author; // 发帖人
-@property (nonatomic, strong) NSNumber *author_id; // 发帖人Id
-
+/**
+ 发帖人
+ */
+@property (nonatomic, copy) NSString *author;
+/**
+ 发帖人Id
+ */
+@property (nonatomic, strong) NSNumber *author_id;
 /**
  同好人Id
  */
@@ -37,12 +42,6 @@
  */
 @property (nonatomic, strong) NSString *portrait;
 /**
- 关注状态 0：未关注 1：已关注
- */
-@property (nonatomic, assign) NSInteger if_focus;
-@property (nonatomic, strong) NSNumber *ID; // 帖子id
-@property (nonatomic, strong) NSNumber *detail_refparam; // 关联id
-/**
  图片数量
  */
 @property (nonatomic, assign) NSInteger images_count;
@@ -51,68 +50,29 @@
  */
 @property (nonatomic, strong) NSString *sdata_type;
 /**
- 来自哪里
+ 发帖时间（转换过的）
  */
-@property (nonatomic, strong) NSString *detail_type_from;
-@property (nonatomic, strong) NSString *detail_type; // 帖子类型
-@property (nonatomic, copy) NSString *transformDate;// 发帖时间（转换过的）
-@property (nonatomic, assign) NSInteger replies; // 回复数
-@property (nonatomic, assign) NSInteger upvotes; // 点赞数
-@property (nonatomic, assign) NSInteger favorites; // 收藏数
-@property (nonatomic, assign) NSInteger favoritenum; // 收藏数 晒图详情
-@property (nonatomic, assign) NSInteger hits; // 点击数
-@property (nonatomic, copy) NSString *authorportrait; // 头像
-@property (nonatomic, strong) NSArray *images; // 图像
-@property (nonatomic, strong) NSArray *tags; // 标签
+@property (nonatomic, copy) NSString *transformDate;
 /**
- 标签标题数组
+ 头像
  */
-@property (nonatomic, strong) NSMutableArray *tagsTitleArr;
-@property (nonatomic, copy) NSString *title; // 标题
-@property (nonatomic, copy) NSString *publish_date;// 发帖时间
-// ---------关注标签
-@property (nonatomic, copy) NSString *name; // 标题
-@property (nonatomic, assign) NSInteger focus; // 关注数
-@property (nonatomic, assign) NSInteger sdata_total_num; // 话题总数
-@property (nonatomic, assign) NSInteger sdata_today_num; // 今天话题数
-@property (nonatomic, assign) NSInteger subject_id; // 话题id
-@property (nonatomic, copy) NSString *type; // 标签类型
-//------------------
+@property (nonatomic, copy) NSString *authorportrait;
 /**
- 回复内容
+ 图片
  */
-@property (nonatomic, copy) NSString *content;
+@property (nonatomic, strong) NSArray *images;
 /**
- 回复内容高度
+ 发帖时间
  */
-@property (nonatomic, assign) CGFloat contentHeight;
+@property (nonatomic, copy) NSString *publish_date;
 
-/**
- 分享网址
+/** 
+ cell的高度 
  */
-@property (nonatomic, copy) NSString *m_url;
-/**
- 标签id
- */
-@property (nonatomic, strong) NSDictionary *tagIDDic;
-/**
- 标签类型
- */
-@property (nonatomic, strong) NSDictionary *tagTypeDic;
-@property (nonatomic, strong) NSNumber *if_favorite; // 收藏 数字,0表示未收藏，1表示收藏
-@property (nonatomic, strong) NSNumber *if_upvotes; // 数字,0表示未点赞，1表示点赞
-/** cell的高度 */
 @property (nonatomic, assign) CGFloat cellHeight;
-/** 图片的height */
-@property (nonatomic, assign) CGFloat pictureHeight;
-/** 标签的总高度 */
-@property (nonatomic, assign) CGFloat allTagsHeight;
-@property (nonatomic, assign,getter=isPraiseBtnSelected) BOOL praiseBtnSelected;
-@property (nonatomic, assign,getter=isCollectionBtnSelected) BOOL collectionBtnSelected;
-/**
- 简要描述
+/** 
+ 图片的height
  */
-@property (nonatomic, copy) NSString *description_;
-
+@property (nonatomic, assign) CGFloat pictureHeight;
 
 @end
