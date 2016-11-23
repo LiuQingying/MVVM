@@ -1,2 +1,2 @@
 # MVVM
-## 没有使用ReactiveCocoa实现MVVM模式
+## 不使用ReactiveCocoa实现MVVM模式
